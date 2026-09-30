@@ -27,4 +27,6 @@ public class Zoo
             Console.WriteLine(animale.Mangia());
         }
     }
+
+    public List<Animale> Animali => animali;
 }

@@ -1,4 +1,5 @@
-public class Pappagallo : Animale
+using System.Text;
+public class Pappagallo : Animale, IVolante
 {
     private double aperturaAlare;
 
@@ -7,12 +8,19 @@ public class Pappagallo : Animale
         this.aperturaAlare = alare;
     }
 
+    
+    public void Vola()
+    {
+        Console.WriteLine("Il pappagallo sta volando! -  apertura alare: " + aperturaAlare);
+    }
+
     public override string FaiVerso()
     {
-        for (int i = 0; i <= 100; i++)
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <= 5; i++)
         {
-            Console.WriteLine("verso pappagallo");
+            sb.Append($"\n verso pappagallo x {i}");
         }
-        return "";
+        return sb.ToString();
     }
 }

@@ -1,4 +1,4 @@
-public abstract class Animale
+public abstract class Animale : IVisitabile
 {
     protected string nome;
     protected int eta;
@@ -21,6 +21,14 @@ public abstract class Animale
         return $"nome: {nome}, età: {eta}, {(IsDiurno ? "diurno" : "notturno")}";
     }
 
+
+    public DateTime DataUltimoControllo { get; set; }
+
+    void IVisitabile.EseguiControllo()
+    {
+        DataUltimoControllo = DateTime.Now;
+        Console.WriteLine($"Controllo eseguito su {nome} - specie: {this.GetType()} alle {DataUltimoControllo}");
+    }
 
 
 }

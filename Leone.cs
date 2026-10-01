@@ -2,7 +2,7 @@ public class Leone : Animale
 {
     private int volumeRuggito;
 
-    public Leone(string n, int e, bool diurno, int volume) : base(n, e, diurno)
+    public Leone(string n, int e, bool diurno, bool siEsibisce, DateTime? dataSpettacolo, string nickname, int volume) : base(n, e, diurno, siEsibisce, dataSpettacolo, nickname)
     {
         volumeRuggito = Math.Clamp(volume, 1, 10);
     }
@@ -16,4 +16,5 @@ public class Leone : Animale
     {
         return "Il leone mangia carne fresca";
     }
+
 }

@@ -3,7 +3,7 @@ public class Pappagallo : Animale, IVolante
 {
     private double aperturaAlare;
 
-    public Pappagallo(string n, int e, bool diurno, double alare): base(n, e, diurno)
+    public Pappagallo(string n, int e, bool diurno, bool siEsibisce, DateTime? dataSpettacolo, string nickname, double alare): base(n, e, diurno, siEsibisce, dataSpettacolo, nickname)
     {
         this.aperturaAlare = alare;
     }

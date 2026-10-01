@@ -2,7 +2,7 @@ public class Pinguino : Animale
 {
     private double velocitaNuovo;
 
-    public Pinguino(string n, int e, bool diurno, double vNuoto): base(n, e, diurno)
+    public Pinguino(string n, int e, bool diurno, bool siEsibisce, DateTime? dataSpettacolo, string nickname, double vNuoto): base(n, e, diurno, siEsibisce, dataSpettacolo, nickname)
     {
         this.velocitaNuovo = vNuoto;
     }
@@ -18,4 +18,5 @@ public class Pinguino : Animale
     }
 
     public void Nuota(){}
+
 }
